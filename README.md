@@ -40,6 +40,11 @@ Username: test1234
 Password: test1234
 
 ```
+
+## Demo
+Check out the live demo: [https://nextjs-form-io-puck.vercel.app/](https://nextjs-form-io-puck.vercel.app/)
+
+
 ## Form.io Integration
 
 1. Create a form in Form.io Builder
