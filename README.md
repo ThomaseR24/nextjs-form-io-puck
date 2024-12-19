@@ -42,7 +42,13 @@ npm run dev
 ## Access Information
 The application will be available at `http://localhost:3000`.
 
+```bash
 
+Login:
+Username: test1234
+Password: test1234
+
+```
 
 ## Form.io Integration
 
