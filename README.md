@@ -5,6 +5,13 @@ A React application that connects Form.io forms with Puck.js for dynamic documen
 ## Demo
 Check out the live demo: [https://nextjs-form-io-puck.vercel.app/](https://nextjs-form-io-puck.vercel.app/)
 
+```bash
+
+Login:
+Username: test1234
+Password: test1234
+
+```
 
 ## Description
 
@@ -35,15 +42,6 @@ npm run dev
 ## Access Information
 The application will be available at `http://localhost:3000`.
 
-
-### Test System
-```bash
-
-Login:
-Username: test1234
-Password: test1234
-
-```
 
 
 ## Form.io Integration
