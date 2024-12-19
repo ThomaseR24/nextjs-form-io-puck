@@ -14,8 +14,8 @@ This application allows:
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
-cd [project-folder]
+git clone https://github.com/formio/nextjs-form-io-puck.git
+cd nextjs-form-io-puck 
 ```
 
 2. Install dependencies:
