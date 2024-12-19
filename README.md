@@ -1,36 +1,183 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Form.io + Puck Live Preview Integration
 
-## Getting Started
+A React application that connects Form.io forms with Puck.js for dynamic document previews.
 
-First, run the development server:
+## Description
 
+This application allows:
+- Display of Form.io forms
+- Live preview of form data
+- Integration with Puck.js for template-based outputs
+- Debug mode for development
+
+## Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [repository-url]
+cd [project-folder]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Access Information
+The application will be available at `http://localhost:3000`.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Test System
+```bash
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Login:
+Username: test1234
+Password: test1234
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+## Form.io Integration
 
-## Deploy on Vercel
+1. Create a form in Form.io Builder
+2. Export JSON and save it in `src/form.json`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Example form.json:
+```json
+{
+  "display": "form",
+  "components": [
+    {
+      "type": "radio",
+      "key": "radio1",
+      "label": "Select delivery options",
+      "values": [
+        {
+          "value": "delivery",
+          "label": "Delivery"
+        },
+        {
+          "value": "pickup",
+          "label": "Pickup"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "key": "textArea1",
+      "label": "Delivery address",
+      "conditional": {
+        "show": true,
+        "when": "radio1",
+        "eq": "delivery"
+      }
+    }
+  ]
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies
+
+- Next.js
+- React
+- Form.io
+- Puck.js
+- TypeScript
+
+## License
+
+MIT
+
+## Components
+
+### LivePreviewWithPuck.js
+
+Main component that handles form data and preview rendering:
+
+```javascript
+import { LivePreviewWithPuck } from '../components/LivePreviewWithPuck';
+
+// Usage in page.tsx
+export default function Page() {
+  return <LivePreviewWithPuck />;
+}
+```
+
+Features:
+- Real-time form data processing
+- Dynamic preview updates
+- Debug mode toggle
+- Responsive layout
+
+### Form Integration
+
+The form component uses Form.io to render and handle form data:
+- Radio buttons for delivery options
+- Conditional text areas
+- Real-time validation
+- Dynamic field visibility
+
+### Preview Features
+
+The preview section shows:
+- Live updates of form data
+- Formatted text output
+- Debug information when enabled
+- Customizable styling
+
+## Development
+
+### Required Dependencies
+
+```json
+{
+  "@formio/react": "^5.2.4-rc.1",
+  "@measured/puck": "^0.13.0",
+  "next": "14.0.4",
+  "react": "^18",
+  "react-dom": "^18"
+}
+```
+
+### Project Structure
+
+```
+├── app/
+│   ├── page.tsx          # Main page component
+│   └── globals.css       # Global styles
+├── components/
+│   └── LivePreviewWithPuck.js  # Main component
+├── src/
+│   └── form.json         # Form configuration
+└── puck.config.js        # Puck configuration
+```
+
+### Future Integration with Puck
+
+Planned features:
+- Visual template editor
+- Custom component library
+- Dynamic layout configuration
+- Template management system
+
+## Workflow
+
+### Form.io to Puck Integration Flow
+
+1. Form Creation:
+   - Design form in Form.io Builder
+   - Define conditional logic
+   - Export form configuration
+
+2. Template Setup:
+   - Create text templates in Puck
+   - Define placeholder positions
+   - Set up dynamic content areas
+
+3. Live Preview:
+   - Form data automatically updates preview
+   - Real-time template rendering
+   - Debug mode for testing

@@ -1,0 +1,45 @@
+{
+  "title": "Page 1",
+  "label": "Page 1",
+  "type": "panel",
+  "key": "page1",
+  "components": [
+    {
+      "label": "Lieferoptionen auswählen",
+      "optionsLabelPosition": "right",
+      "inline": false,
+      "values": [
+        {
+          "label": "Lieferung",
+          "value": "lieferung",
+          "shortcut": ""
+        },
+        {
+          "label": "Abholung",
+          "value": "abholung",
+          "shortcut": ""
+        }
+      ],
+      "type": "radio",
+      "input": true,
+      "key": "radio1",
+      "tableView": false
+    },
+    {
+      "label": "Lieferanschrift",
+      "hidden": false,
+      "conditional": {
+        "show": true,
+        "when": "radio1",
+        "eq": "lieferung"
+      },
+      "type": "textarea",
+      "input": true,
+      "key": "textArea1",
+      "tableView": true
+    }
+  ],
+  "input": false,
+  "tableView": false
+}
+  
