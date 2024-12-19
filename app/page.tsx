@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 //import FormComponent from "../components/FormComponent";
 import LivePreviewWithPuck from "../components/LivePreviewWithPuck";
 export default function Home() {
