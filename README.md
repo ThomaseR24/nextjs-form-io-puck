@@ -2,6 +2,10 @@
 
 A React application that connects Form.io forms with Puck.js for dynamic document previews.
 
+## Demo
+Check out the live demo: [https://nextjs-form-io-puck.vercel.app/](https://nextjs-form-io-puck.vercel.app/)
+
+
 ## Description
 
 This application allows:
@@ -40,9 +44,6 @@ Username: test1234
 Password: test1234
 
 ```
-
-## Demo
-Check out the live demo: [https://nextjs-form-io-puck.vercel.app/](https://nextjs-form-io-puck.vercel.app/)
 
 
 ## Form.io Integration
