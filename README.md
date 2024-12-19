@@ -1,6 +1,6 @@
 # Form.io + Puck Live Preview Integration
 
-A React application that connects Form.io forms with Puck.js for dynamic document previews.
+A Next.js application that connects Form.io forms with Puck.js for dynamic document previews.
 
 ## Demo
 Check out the live demo: [https://nextjs-form-io-puck.vercel.app/](https://nextjs-form-io-puck.vercel.app/)
