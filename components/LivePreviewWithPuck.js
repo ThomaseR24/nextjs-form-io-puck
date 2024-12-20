@@ -93,7 +93,7 @@ const LivePreviewWithPuck = () => {
         maxWidth: '1200px',  // Maximale Breite
         margin: '0 auto',    // Zentrieren
         padding: '2rem',
-        height: '100%'       // Volle Höhe
+        height: '80%'       // Volle Höhe
       }}>
         <div style={{ 
           display: "flex", 
@@ -160,7 +160,13 @@ const LivePreviewWithPuck = () => {
           </div>
         </div>
       </div>
+      <p style={{ display: 'block', color: 'black', textAlign: 'center' }}>
+        <a href="https://github.com/ThomaseR24/nextjs-form-io-puck" target="_blank" rel="noopener noreferrer">
+          Demo Quellcode GitHub
+        </a>
+      </p>
     </div>
+    
   );
 };
 
