@@ -21,11 +21,16 @@ const config = {
           {text}
         </div>
       ),
-      defaultProps: {
-        text: 'Noch keine Lieferadresse angegeben'
+      fields: {
+        text: { type: "text" }
       }
+    }
+  },
+  defaultProps: {
+    Text: {
+      text: "Vielen Dank für Ihre Bestellung\n\nIhre Lieferart: noch nicht ausgewählt"
     }
   }
 };
 
-export default config; 
+export default config;
